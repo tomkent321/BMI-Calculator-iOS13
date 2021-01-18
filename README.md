@@ -1,7 +1,7 @@
 
 ![App Brewery Banner](Documentation/AppBreweryBanner.png)
 
-#  BMI Calculator
+#  BMI Calculator Local Version
 
 ## Our Goal
 
