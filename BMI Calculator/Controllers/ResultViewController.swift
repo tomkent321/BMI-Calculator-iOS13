@@ -9,9 +9,12 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    var calculatorBrain = CalculatorBrain()
     var bmiValue: String?
+    var advice: String?
+    var color: UIColor?
     
+    @IBOutlet weak var backGround: UIImageView!
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
     
@@ -19,26 +22,9 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         bmiLabel.text = bmiValue
+        adviceLabel.text = advice
+        backGround.backgroundColor  = color
         
-        let bmiMessage = ["Go have a tasty snack!",
-                          "Keep up the good work!",
-                          "Let us eat lots of lettuce!",
-                          "Is your life insurance paid up?"]
-        
-        let bmiNum = Double(bmiValue!) ?? 0
-        var advice = 0
-        
-        if bmiNum < 18.5 {
-            advice = 0
-        } else if bmiNum > 18.4 &&  bmiNum < 25.0 {
-            advice = 1
-        } else if bmiNum > 24.9 &&  bmiNum < 30.0 {
-            advice = 2
-        } else {
-            advice = 3
-        }
-        
-        adviceLabel.text = bmiMessage[advice]
     }
    
     @IBAction func recalculatePressed(_ sender: UIButton) {

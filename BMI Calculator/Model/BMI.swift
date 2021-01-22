@@ -6,6 +6,10 @@
 //  Copyright © 2021 Angela Yu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-//add struct
+struct BMI {
+    let value: Float
+    let advice: String
+    let color: UIColor
+}
